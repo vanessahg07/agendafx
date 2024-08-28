@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="502.0" prefWidth="636.0" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="co.edu.uniquindio.poo.PrimaryController">
+   <children>
+      <TabPane layoutY="1.0" prefHeight="502.0" prefWidth="636.0" tabClosingPolicy="UNAVAILABLE">
+        <tabs>
+          <Tab text="Contacto">
+               <content>
+                  <Pane prefHeight="200.0" prefWidth="200.0">
+                     <children>
+                        <TextField fx:id="txt_alias" layoutX="96.0" layoutY="140.0" />
+                        <TextField fx:id="txt_nombre" layoutX="96.0" layoutY="89.0" />
+                        <TextField fx:id="txt_telefono" layoutX="96.0" layoutY="243.0" />
+                        <TextField fx:id="txt_direccion" layoutX="96.0" layoutY="183.0" />
+                        <TextField fx:id="txt_email" layoutX="96.0" layoutY="302.0" />
+                        <Label layoutX="131.0" layoutY="34.0" text="Crear contacto">
+                           <font>
+                              <Font name="System Bold Italic" size="12.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="24.0" layoutY="102.0" text="Nombre" />
+                        <Label layoutX="24.0" layoutY="153.0" text="Alias" />
+                        <Label layoutX="20.0" layoutY="200.0" text="Dirección" />
+                        <Label layoutX="22.0" layoutY="256.0" text="Teléfono" />
+                        <Label layoutX="22.0" layoutY="315.0" text="Email" />
+                        <Button fx:id="boton_crearContacto" layoutX="131.0" layoutY="365.0" mnemonicParsing="false" onAction="#accion_crearContacto" text="Crear" />
+                        <Line endX="-43.39996337890625" endY="296.0000305175781" layoutX="315.0" layoutY="148.0" startX="-43.39996337890625" startY="-148.59999084472656" />
+                        <TextField fx:id="txt_valorAModificar" layoutX="371.0" layoutY="196.0" />
+                        <Label layoutX="402.0" layoutY="34.0" text="Modificar Contacto">
+                           <font>
+                              <Font name="System Bold Italic" size="12.0" />
+                           </font>
+                        </Label>
+                        <Line endX="-113.89996337890625" endY="33.600006103515625" layoutX="385.0" layoutY="259.0" startX="253.00006103515625" startY="33.59999084472656" />
+                        <Label layoutX="404.0" layoutY="316.0" text="Eliminar Contacto">
+                           <font>
+                              <Font name="System Bold Italic" size="12.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="txt_eliminarContacto" layoutX="388.0" layoutY="352.0" />
+                        <Label layoutX="287.0" layoutY="153.0" text="¿Qué desea modificar?" />
+                        <Label layoutX="340.0" layoutY="102.0" text="Nombre" />
+                        <TextField fx:id="txt_nombreModificar" layoutX="447.0" layoutY="80.0" />
+                        <TextField fx:id="txt_queDeseaModificar" layoutX="447.0" layoutY="140.0" />
+                        <Button fx:id="boton_modificarContacto" layoutX="420.0" layoutY="250.0" mnemonicParsing="false" onAction="#accion_modificarContacto" text="Modificar" />
+                        <Button fx:id="boton_eliminarContacto" layoutX="428.0" layoutY="395.0" mnemonicParsing="false" onAction="#accion_eliminarContacto" text="Eliminar" />
+                     </children>
+                  </Pane>
+               </content>
+            </Tab>
+          <Tab text="Grupo">
+               <content>
+                  <Pane prefHeight="200.0" prefWidth="200.0">
+                     <children>
+                        <TextArea fx:id="txt_listaContactos_grupo" layoutX="14.0" layoutY="267.0" prefHeight="160.0" prefWidth="609.0" />
+                        <Label layoutX="32.0" layoutY="94.0" text="Nombre" />
+                        <TextField fx:id="txt_nombreGrupo" layoutX="114.0" layoutY="90.0" />
+                        <Label layoutX="27.0" layoutY="149.0" text="Categoria" />
+                        <ComboBox fx:id="combo_categoria" layoutX="115.0" layoutY="144.0" onAction="#mostrar_categoria" prefWidth="150.0" />
+                        <Button fx:id="boton_crearGrupo" layoutX="114.0" layoutY="222.0" mnemonicParsing="false" onAction="#crear_grupo" text="Crear" />
+                        <Line endX="-12.39996337890625" endY="217.20001220703125" layoutX="318.0" layoutY="56.0" startX="-12.39996337890625" startY="-59.59999465942383" />
+                        <Label layoutX="127.0" layoutY="34.0" text="Crear contacto" />
+                        <Label layoutX="419.0" layoutY="34.0" text="Agregar contacto" />
+                        <Label layoutX="337.0" layoutY="94.0" text="Nombre" />
+                        <TextField fx:id="txt_nombreContacto_agregar" layoutX="438.0" layoutY="90.0" />
+                        <Label layoutX="317.0" layoutY="149.0" text="Nombre Grupo" />
+                        <TextField fx:id="txt_nombreGrupo_agregar" layoutX="438.0" layoutY="145.0" />
+                        <Button fx:id="boton_agregarContacto" layoutX="443.0" layoutY="222.0" mnemonicParsing="false" onAction="#accion_agregarContacto" text="Agregar" />
+                     </children>
+                  </Pane>
+               </content>
+            </Tab>
+            <Tab text="Reuniones">
+               <content>
+                  <Pane prefHeight="200.0" prefWidth="200.0">
+                     <children>
+                        <TextField fx:id="txt_descripción_reunion" layoutX="186.0" layoutY="71.0" />
+                        <TextField fx:id="txt_hora" layoutX="186.0" layoutY="175.0" />
+                        <Line endX="1.20001220703125" endY="385.6000061035156" layoutX="382.0" layoutY="57.0" startX="1.20001220703125" startY="-66.19999694824219" />
+                        <DatePicker fx:id="txt_fecha" layoutX="176.0" layoutY="124.0" />
+                        <TextArea fx:id="txt_listaContactos_Reunion" layoutX="384.0" prefHeight="443.0" prefWidth="253.0" />
+                        <Label layoutX="45.0" layoutY="75.0" text="Descripción" />
+                        <Label layoutX="66.0" layoutY="179.0" text="Hora" />
+                        <Label layoutX="58.0" layoutY="128.0" text="Fecha" />
+                        <Button fx:id="boton_crearReunion" layoutX="137.0" layoutY="232.0" mnemonicParsing="false" onAction="#accion_crearReunion" text="Crear Reunión" />
+                        <Label layoutX="161.0" layoutY="34.0" text="Crear una reunión">
+                           <font>
+                              <Font name="System Bold Italic" size="14.0" />
+                           </font>
+                        </Label>
+                        <Line endX="29.70001220703125" endY="180.80001831054688" layoutX="353.0" layoutY="102.0" startX="-353.0" startY="180.80001831054688" />
+                        <Label layoutX="138.0" layoutY="300.0" text="Asignar contacto">
+                           <font>
+                              <Font name="System Bold Italic" size="14.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="41.0" layoutY="343.0" text="Nombre contacto" />
+                        <TextField fx:id="txt_nombre_AsignarReunion" layoutX="186.0" layoutY="339.0" />
+                        <Button fx:id="boton_agregarContacto_Reunion" layoutX="142.0" layoutY="392.0" mnemonicParsing="false" onAction="#accion_agregarAReunion" text="Agregar a la reuinión" />
+                     </children>
+                  </Pane>
+               </content>
+            </Tab>
+        </tabs>
+      </TabPane>
+   </children>
+</Pane>
